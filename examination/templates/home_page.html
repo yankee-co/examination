@@ -27,7 +27,7 @@
         <td class = 'bold'>Отправитель</td>
         <td class = 'bold'>Получатель</td>
       </tr>
-      {% for dicted in listed_data %}
+      {% for dicted in data %}
       <tr>
         <td>{{dicted.number}}</td>
         <td>{{dicted.type}}</td>
@@ -40,6 +40,8 @@
     </table>
   </body>
 </html>
+
+{{data}}
 
 <!--
 dicted.update({
