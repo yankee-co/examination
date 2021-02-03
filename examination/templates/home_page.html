@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+    <style media="screen">
+
+      table, tr, td{
+        border:1px solid black;
+        border-spacing:0px;}
+
+      td{
+        padding:15px;}
+
+      .bold{
+        font-weight:600;}
+
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class = 'bold'>№</td>
+        <td class = 'bold'>Операция</td>
+        <td class = 'bold'>Дата и время</td>
+        <td class = 'bold'>Сумма</td>
+        <td class = 'bold'>Отправитель</td>
+        <td class = 'bold'>Получатель</td>
+      </tr>
+      {% for dicted in listed_data %}
+      <tr>
+        <td>{{dicted.number}}</td>
+        <td>{{dicted.type}}</td>
+        <td>{{dicted.date}}</td>
+        <td>{{dicted.amount}} UAH</td>
+        <td>{{dicted.sender}}</td>
+        <td>{{dicted.getter}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
+
+<!--
+dicted.update({
+      'number' : number,
+      'date' : transaction.created,
+      'amount' : transaction.amount,
+      'sender' : sender,
+      'getter' : getter,
+      })
+-->
